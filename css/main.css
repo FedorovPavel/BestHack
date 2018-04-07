@@ -107,6 +107,11 @@ html, body {
 .nav__link_header {
 	text-decoration: none;
 	color: #ddd;
+	cursor: pointer;
+	transition-delay: 0ms;
+	transition-property: border;
+	transition-duration: 100ms;
+	transition: ease;
 }
 
 .nav__link_header:hover {
@@ -228,6 +233,10 @@ html, body {
 	transform: translateX(-100%);
 }
 
+.field.rhidden{
+	transform: translateX(100%);
+}
+
 .field:first-child{
 	margin-top: 0px;
 }
@@ -254,6 +263,14 @@ html, body {
 	height: 100%;
 	text-align: center;
 	margin: 0px 10px;
+	transition-delay: 0ms;
+	transition-duration: 250ms;
+	transition-property: transform;
+	transition-timing-function: ease;
+}
+
+.knowledges_container__knowledge-div.hidden{
+	transform: translateY(100%);
 }
 
 .knowledges-icon-container{
