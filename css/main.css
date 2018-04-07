@@ -162,12 +162,24 @@ html, body {
 	width: 30%;
 }
 
+
+
 .photo-img{
 	max-width: 100%;
 	max-height: 100%;
+	padding: 0px;
+	margin: 0px;
 	box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
 	width: auto;
 	height: auto;
+	transition-delay: 0ms;
+	transition-duration: 500ms;
+	transition-property: transform;
+	transition-timing-function: ease;
+}
+
+.photo-img.hidden{
+	transform: scale(0);
 }
 
 .section__content_info-div{
@@ -184,17 +196,36 @@ html, body {
 .section__content_info_card-div{
 	width: 100%;
 	box-shadow: 0px 5px 2px 0px rgba(0,0,0,0.5);
+	overflow: hidden;
 }
 
 .section__content_info_card_initial-div{
 	width: 100%;
 	height: 80%;
 	text-align: center;
+	transition-delay: 0ms;
+	transition-duration: 500ms;
+	transition-property: transform;
+	transition-timing-function: ease;
+	transform: translate(0px);
 }
+
+.section__content_info_card_initial-div.hidden{
+	transform: translateX(-100%);
+}
+
 
 .field{
 	width: 100%;
 	margin: 10px 0px;
+	transition-delay: 0ms;
+	transition-duration: 500ms;
+	transition-property: transform;
+	transition-timing-function: ease;
+}
+
+.field.hidden{
+	transform: translateX(-100%);
 }
 
 .field:first-child{

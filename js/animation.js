@@ -34,13 +34,29 @@ function animateSection(id) {
 
 	$(section).attr('animate','true');
 
-	animatePhoto();
-	animateContainer();
-	animateKnowledges();
+	animatePhoto(section);
+	animateInitial(section);
+	animateContainer(section);
+	animateKnowledges(section);
 	return;
 
-	function animateContainer() {
-		
+	function animateInitial(section) {
+		$(section).find('.section__content_info_card_initial-div').removeClass('hidden');
+		return;
+	}
+
+	function animateContainer(section) {
+		let elems = $(section).find('.field');
+		elems.sort((a, b) => {
+			if (Number($(a).attr('num')) > Number($(b).attr('num')) )
+				return 1;
+			return -1;
+		});
+		for (let I = 0; I < elems.length; I++) {
+			setTimeout(function(){
+				$(elems[I]).removeClass('hidden');
+			}, (I + 1) * 50);
+		}
 	}
 
 	function animateKnowledges() {
@@ -48,8 +64,10 @@ function animateSection(id) {
 	}
 
 	function animatePhoto() {
-		
+		$(section).find('img.photo-img').removeClass('hidden');
+		return;
 	}
+
 }
 
 function engineScrollAnimation() {
@@ -77,5 +95,7 @@ function checkAnimationOnScreen() {
 
 $(document).ready(function () {
 	bindMenuScroll();
+	checkAnimationOnScreen();
 	engineScrollAnimation();
+	
 });
