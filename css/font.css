@@ -135,10 +135,18 @@
     font-size: 14px;
 }
 
-.c-main{
+.c-main-ligth{
 	color: #fff;
 }
 
-.c-sub{
+.c-sub-ligth{
+    color: #aaa;
+}
+
+.c-main-dark{
 	color: #000;
+}
+
+.c-sub-dark{
+    color: #202020;
 }
