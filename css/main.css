@@ -357,6 +357,14 @@ img.knowledge-icon {
 	display: inline-block;
 	padding: 0 10px;
 	text-align: center;
+	transition-delay: 0ms;
+	transition-duration: 1s;
+	transition-timing-function: ease;
+	transition-property: transform;
+}
+
+.member.hidden{
+	transform: scale(0) rotateY(1080deg);
 }
 
 .member__img {

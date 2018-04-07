@@ -103,7 +103,28 @@ function checkAnimationOnScreen() {
 	animateSection('#pasha');
 	animateSection('#dima');
 	animateSection('#barabulka');
+	animateFooter();
 	return;
+}
+
+function animateFooter(){
+	const section = $('#members-container');
+	if (!$(section).isOnScreen(0.2, 0.2))
+		return;
+	
+	animateMember();
+	function animateMember() {
+		let members = $(section).find(".member");
+		members.sort((a, b) => {
+			if (Number($(a).attr('num')) > Number($(b).attr('num')))
+				return 1;
+			return -1;
+		});
+		for (let I = 0; I < members.length; I++) {
+			$(members[I]).css('transition-delay', ((I + 1) * 200)+'ms');
+		}
+		$(members).removeClass('hidden');
+	}
 }
 
 $(document).ready(function () {
