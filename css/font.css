@@ -150,3 +150,11 @@
 .c-sub-dark{
     color: #202020;
 }
+
+.l-align{
+    text-align: left;
+}
+
+.r-align{
+    text-align: right;
+}

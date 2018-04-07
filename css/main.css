@@ -150,6 +150,7 @@ html, body {
 }
 
 .sections-background img{
+	height: 100vh;
 	width: 100%;
 }
 
@@ -168,6 +169,7 @@ html, body {
 }
 
 .section:nth-child(odd){
+	background: rgba(0,0,0,0.2);
 }
 
 .section__content{
@@ -188,8 +190,6 @@ html, body {
 .section__content_photo-div{
 	width: 30%;
 }
-
-
 
 .photo-img{
 	max-width: 100%;
@@ -261,11 +261,11 @@ html, body {
 }
 
 .field.hidden{
-	transform: translateX(-100%);
+	transform: translateX(-200%);
 }
 
 .field.rhidden{
-	transform: translateX(100%);
+	transform: translateX(200%);
 }
 
 .field:first-child{
@@ -276,9 +276,19 @@ html, body {
 	margin-bottom: 0px;
 }
 
-.section__content_info-knowledges-div{
+.section__content_info_knowledges-div{
 	width: 100%;
-	margin-top: 10px;
+	margin-top: 5%;	
+	padding: 10px;
+	border-radius: 15px;
+}
+
+.section__content_info_knowledges-div.dark{
+	background: rgba(0,0,0,0.8);
+}
+
+.section__content_info_knowledges-div.ligth{
+	background: rgba(255,255,255,0.8);
 }
 
 .section__content_info_knowledges_container-div{
@@ -286,14 +296,14 @@ html, body {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: flex-start;	
 }
 
 .knowledges_container__knowledge-div{
 	width: 80px;
 	height: 100%;
 	text-align: center;
-	margin: 0px 10px;
+	margin: 10px 10px;
 	transition-delay: 0ms;
 	transition-duration: 250ms;
 	transition-property: transform;
@@ -301,7 +311,7 @@ html, body {
 }
 
 .knowledges_container__knowledge-div.hidden{
-	transform: translateY(100%);
+	transform: translateY(200%);
 }
 
 .knowledges-icon-container{

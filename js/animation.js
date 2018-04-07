@@ -26,13 +26,13 @@ function bindMenuScroll() {
 
 function animateSection(id) {
 	const section = $(id);
-	if (!$(section).isOnScreen(0.1, 0.1))
+	if (!$(section).isOnScreen(0.3, 0.3))
 		return;
 
 	if ($(section).attr('animate') == 'true')
 		return;
 
-	$(section).attr('animate','true');
+	$(section).attr('animate', 'true');
 
 	animatePhoto();
 	animateInitial();
@@ -48,33 +48,29 @@ function animateSection(id) {
 	function animateContainer() {
 		let elems = $(section).find('.field');
 		elems.sort((a, b) => {
-			if (Number($(a).attr('num')) > Number($(b).attr('num')) )
+			if (Number($(a).attr('num')) > Number($(b).attr('num')))
 				return 1;
 			return -1;
 		});
 		for (let I = 0; I < elems.length; I++) {
-			setTimeout(function(){
-				if ($(elems[I]).hasClass('hidden'))
-					$(elems[I]).removeClass('hidden');
-				else 
-					$(elems[I]).removeClass('rhidden');
-			}, (I + 1) * 50);
+			$(elems[I]).css('transition-delay', ((I + 1) * 200)+'ms');
 		}
+
+		$(elems).removeClass('hidden').removeClass('rhidden');
 		return;
 	}
 
 	function animateKnowledges() {
 		let knowledges = $(section).find(".knowledges_container__knowledge-div");
 		knowledges.sort((a, b) => {
-			if (Number($(a).attr('num')) > Number($(b).attr('num')) )
+			if (Number($(a).attr('num')) > Number($(b).attr('num')))
 				return 1;
 			return -1;
 		});
 		for (let I = 0; I < knowledges.length; I++) {
-			setTimeout(function(){
-				$(knowledges[I]).removeClass('hidden');
-			}, (I + 1) * 50);
+			$(knowledges[I]).css('transition-delay', ((I + 1) * 200)+'ms');
 		}
+		$(knowledges).removeClass('hidden');
 	}
 
 	function animatePhoto() {
@@ -111,5 +107,5 @@ $(document).ready(function () {
 	bindMenuScroll();
 	checkAnimationOnScreen();
 	engineScrollAnimation();
-	
+
 });
