@@ -1,0 +1,282 @@
+html, body {
+	height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-block {
+	height: 100%;
+	width: 100%;
+}
+
+.page-block__content {
+	padding: 25px 45px;
+	height: calc(100% - 50px);
+}
+
+.nav {
+	padding: 0px;
+}
+
+.nav__item {
+	list-style: none;
+	padding: 5px;
+}
+
+.nav__item_hor {
+	display: inline-block;
+}
+
+.btn {
+	text-decoration: none;
+	color: #000;
+	display: inline-block;
+    padding: 7px 40px;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 40px;
+    outline: none;
+    background: #ddd;
+}
+
+.btn:hover {
+	background: #421d3b;
+	color: #ddd;
+}
+
+.main {
+	background: url('../img/bmstu.jpg') no-repeat;
+	background-size: cover;
+}
+
+.main__blackout {
+	height: 100%;
+	width: 100%;
+	background: rgba(5, 3, 15, 0.8);
+}
+
+.main__wrapper {
+	height: 100%;
+
+	/* Firefox */
+	display:-moz-box;
+	-moz-box-orient: vertical;
+	-moz-box-pack: justify;
+	-moz-box-align: center;
+
+	/* Safari и Chrome */
+	display:-webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: justify;
+	-webkit-box-align: center;
+}
+
+.main__header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	-webkit-box-align: center;
+    align-items: center;
+}
+
+.header__logo {
+	display: flex;
+}
+
+.logo__img {
+	height: 90px;
+}
+
+.header__nav {
+	display: inline-block;
+	margin: 0;
+	color: #ddd;
+}
+
+.nav__link_header {
+	text-decoration: none;
+	color: #ddd;
+}
+
+.nav__link_header:hover {
+	border-bottom: 4px solid #58274f;
+}
+
+.main__info {
+	display: flex;
+	font-size: 72px;
+	color: #dddddd;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+	text-align: center;
+}
+
+.main__info_quo {
+	display: block;
+	font-size: 18px;
+}
+
+.i-down {
+	display: inline-block;
+	-moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	font-size: 22px;
+}
+
+.section:nth-child(even){
+	background: #4b4b4b;
+}
+
+.section:nth-child(odd){
+	background: #272727;
+}
+
+.section__content{
+	display: flex;
+	flex-direction: row;
+	justify-content:flex-start;
+	align-items: center;
+	width: calc(100% - 120px);
+	height: calc(100% - 80px);
+	padding: 40px 60px;
+}
+
+.section__content_photo-div{
+	width: 30%;
+}
+
+.photo-img{
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+
+.section__content_info-div{
+	margin-left: 5%;
+	width: 65%;
+	height: 100%;
+}
+
+.section__content_info_card-div{
+	width: 100%;
+	box-shadow: 0px 5px 2px 0px rgba(0,0,0,0.5);
+}
+
+.section__content_info_card_initial-div{
+	width: 100%;
+	height: 80%;
+	text-align: center;
+}
+
+.field{
+	width: 100%;
+	margin: 10px 0px;
+}
+
+.field:first-child{
+	margin-top: 0px;
+}
+
+.field:last-child{
+	margin-bottom: 0px;
+}
+
+.section__content_info-knowledges-div{
+	width: 100%;
+	margin-top: 10px;
+}
+
+.section__content_info_knowledges_container-div{
+	overflow-y: hidden;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.knowledges_container__knowledge-div{
+	width: 80px;
+	height: 100%;
+	text-align: center;
+	margin: 0px 10px;
+}
+
+.knowledges-icon-container{
+	height: 100%;
+}
+
+img.knowledge-icon {
+	max-height: 40px;
+}
+
+.footer {
+	background: #ddd;
+}
+
+.footer__wrapper {
+	height: 100%;
+
+	/* Firefox */
+	display:-moz-box;
+	-moz-box-orient: vertical;
+	-moz-box-pack: justify;
+	-moz-box-align: center;
+
+	/* Safari и Chrome */
+	display:-webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-pack: justify;
+	-webkit-box-align: center;
+}
+
+.footer__text {
+	width: 100%;
+	text-align: left;
+}
+
+.footer__description {
+	color: #222;
+	font-size: 18px;
+}
+
+.member {
+	width: calc(25% - 20px);
+	display: inline-block;
+	padding: 0 10px;
+	text-align: center;
+}
+
+.member__img {
+	width: 80%;
+	margin: 10px auto;
+	border-radius: 500px;
+}
+
+.member__name {
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.member__role {
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+}
+
+.copyright {
+	color: #777;
+	font-size: 14px;
+	font-weight: bold;
+}

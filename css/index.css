@@ -1,0 +1,40 @@
+body {
+	width: 100vw;
+	padding: 0px;
+	margin: 0px;
+	overflow-x: hidden;
+	min-width: 1024px;
+}
+
+section.section{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	text-align: center;
+}
+
+section.section div.content {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+section.section:nth-child(even){
+	background: #4b4b4b;
+}
+
+section.section:nth-child(odd){
+	background: #272727;
+}
+
+.f-22{
+	font-size: 22px;
+}
+
+.f-16{
+	font-size: 16px;
+}
+
+.f-15{
+	font-size: 15px;
+}
