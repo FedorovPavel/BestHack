@@ -16,6 +16,9 @@ function bindMenuScroll() {
 	$('#href-bara').click(function () {
 		scroll('#barabulka');
 	});
+	$('#whyWe').click(function () {
+		scroll('#capitan');
+	});
 
 	function scroll(elem) {
 		$('html, body').animate({
