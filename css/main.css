@@ -169,7 +169,7 @@ html, body {
 }
 
 .section:nth-child(odd){
-	background: rgba(0,0,0,0.2);
+	background: rgba(0,0,0,0.8);
 }
 
 .section__content{
@@ -253,7 +253,7 @@ html, body {
 
 .field{
 	width: 100%;
-	margin: 10px 0px;
+	margin: 20px 0px;
 	transition-delay: 0ms;
 	transition-duration: 500ms;
 	transition-property: transform;
