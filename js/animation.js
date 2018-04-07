@@ -19,6 +19,9 @@ function bindMenuScroll() {
 	$('#whyWe').click(function () {
 		scroll('#capitan');
 	});
+	$('#href-total').click(function() {
+		scroll('#footer');
+	})
 
 	function scroll(elem) {
 		$('html, body').animate({
